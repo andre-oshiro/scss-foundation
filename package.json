@@ -1,6 +1,6 @@
 {
   "name": "scss-template",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "A template for SCSS.",
   "main": "index.js",
   "scripts": {

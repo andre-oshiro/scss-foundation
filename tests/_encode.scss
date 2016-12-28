@@ -1,0 +1,7 @@
+@include test-module('encode function') {
+  @include test('should encode specific characters for proper URI formatting') {
+    $test: url-encode('%;,/?:@&=+$!~*"(){}[]<>#^');
+    $expect: '%25%3B%2C%2F%3F%3A%40%26%3D%2B%24%21%7E%2A%22%28%29%7B%7D%5B%5D%3C%3E%23%5E';
+    @include assert-equal($test, $expect);
+  }
+}

@@ -1,0 +1,7 @@
+@import "true";
+@import "../scss/functions/replace";
+@import "../scss/functions/encode";
+@import "replace";
+@import "encode";
+$true-terminal-output: true;
+@include report;

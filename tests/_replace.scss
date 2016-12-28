@@ -1,6 +1,3 @@
-@import "true";
-@import "../scss/functions/replace";
-
 @include test-module('replace function') {
   @include test('should replace "a" with "z" in $string') {
     $test: replace('abcdefghijkelmnopqrstuvwxyzabcdefghijkelmnopqrstuvwxyz', 'a', 'z');
@@ -20,7 +17,3 @@
     @include assert-equal($test, $expect);
   }
 }
-
-$true-terminal-output: true;
-
-@include report;
