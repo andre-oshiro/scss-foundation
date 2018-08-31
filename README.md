@@ -1,4 +1,4 @@
-# styles
+# SCSS Foundation
 
 A basic set of SCSS files that can be used as the foundation.
 
