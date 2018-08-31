@@ -1,0 +1,19 @@
+@include test-module('replace function') {
+  @include test('should replace "a" with "z" in $string') {
+    $test: replace('abcdefghijkelmnopqrstuvwxyzabcdefghijkelmnopqrstuvwxyz', 'a', 'z');
+    $expect: 'zbcdefghijkelmnopqrstuvwxyzzbcdefghijkelmnopqrstuvwxyz';
+    @include assert-equal($test, $expect);
+  }
+
+  @include test('should replace "a" with "" in $string') {
+    $test: replace('abcdefghijkelmnopqrstuvwxyzabcdefghijkelmnopqrstuvwxyz', 'a');
+    $expect: 'bcdefghijkelmnopqrstuvwxyzbcdefghijkelmnopqrstuvwxyz';
+    @include assert-equal($test, $expect);
+  }
+
+  @include test('should replace "a" with "aaa" in $string') {
+    $test: replace('abcdefghijkelmnopqrstuvwxyzabcdefghijkelmnopqrstuvwxyz', 'a', 'aaa');
+    $expect: 'aaabcdefghijkelmnopqrstuvwxyzaaabcdefghijkelmnopqrstuvwxyz';
+    @include assert-equal($test, $expect);
+  }
+}

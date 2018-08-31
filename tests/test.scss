@@ -1,0 +1,7 @@
+@import 'true';
+@import '../styles/1-functions/replace';
+@import '../styles/1-functions/encode';
+@import 'replace';
+@import 'encode';
+$true-terminal-output: true;
+@include report;
